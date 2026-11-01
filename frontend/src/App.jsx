@@ -38,7 +38,9 @@ export default function App() {
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef(null);
 
-  const apiBase = '/api';
+  const apiBase = typeof window !== 'undefined' && window.location.pathname.startsWith('/deploy-manager')
+    ? '/deploy-manager/api'
+    : '/api';
 
   const formatBytes = (bytes) => {
     if (!bytes || bytes === 0) return '0 KB';
