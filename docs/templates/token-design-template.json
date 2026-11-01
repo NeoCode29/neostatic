@@ -1,0 +1,72 @@
+﻿{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "Design Tokens Standard",
+  "version": "1.0.0",
+  "colors": {
+    "primary": {
+      "DEFAULT": { "value": "#2563eb", "type": "color" },
+      "hover": { "value": "#1d4ed8", "type": "color" },
+      "foreground": { "value": "#ffffff", "type": "color" }
+    },
+    "background": {
+      "DEFAULT": { "value": "#f8fafc", "type": "color" },
+      "dark": { "value": "#0f172a", "type": "color" }
+    },
+    "surface": {
+      "DEFAULT": { "value": "#ffffff", "type": "color" },
+      "dark": { "value": "#1e293b", "type": "color" },
+      "glass": { "value": "rgba(255, 255, 255, 0.8)", "type": "color" }
+    },
+    "muted": {
+      "DEFAULT": { "value": "#64748b", "type": "color" },
+      "foreground": { "value": "#94a3b8", "type": "color" }
+    },
+    "border": {
+      "DEFAULT": { "value": "#e2e8f0", "type": "color" },
+      "dark": { "value": "#334155", "type": "color" }
+    },
+    "status": {
+      "success": { "value": "#10b981", "type": "color" },
+      "warning": { "value": "#f59e0b", "type": "color" },
+      "error": { "value": "#ef4444", "type": "color" }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": { "value": "Inter, system-ui, -apple-system, sans-serif", "type": "fontFamily" },
+      "mono": { "value": "JetBrains Mono, Menlo, monospace", "type": "fontFamily" }
+    },
+    "fontSize": {
+      "xs": { "value": "0.75rem", "type": "dimension" },
+      "sm": { "value": "0.875rem", "type": "dimension" },
+      "base": { "value": "1rem", "type": "dimension" },
+      "lg": { "value": "1.125rem", "type": "dimension" },
+      "xl": { "value": "1.25rem", "type": "dimension" },
+      "2xl": { "value": "1.5rem", "type": "dimension" }
+    },
+    "lineHeight": {
+      "normal": { "value": "1.5", "type": "number" },
+      "tight": { "value": "1.25", "type": "number" }
+    }
+  },
+  "spacing": {
+    "1": { "value": "0.25rem", "type": "dimension" },
+    "2": { "value": "0.5rem", "type": "dimension" },
+    "3": { "value": "0.75rem", "type": "dimension" },
+    "4": { "value": "1rem", "type": "dimension" },
+    "6": { "value": "1.5rem", "type": "dimension" },
+    "8": { "value": "2rem", "type": "dimension" }
+  },
+  "borderRadius": {
+    "sm": { "value": "0.375rem", "type": "dimension" },
+    "md": { "value": "0.5rem", "type": "dimension" },
+    "lg": { "value": "0.75rem", "type": "dimension" },
+    "xl": { "value": "1rem", "type": "dimension" },
+    "full": { "value": "9999px", "type": "dimension" }
+  },
+  "shadows": {
+    "sm": { "value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)", "type": "shadow" },
+    "md": { "value": "0 4px 6px -1px rgba(0, 0, 0, 0.1)", "type": "shadow" },
+    "glass": { "value": "0 8px 32px 0 rgba(31, 38, 135, 0.07)", "type": "shadow" }
+  }
+}

@@ -1,0 +1,41 @@
+<!-- name: VPS Server Health Card -->
+<!-- category: CARDS -->
+<!-- description: VPS and Rust Axum runtime health monitor with memory footprint and port status -->
+
+<div class="bg-white rounded-2xl p-4 text-slate-900 shadow-xl max-w-xs relative overflow-hidden font-sans">
+  <div class="flex items-center justify-between mb-3">
+    <div>
+      <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Engine Status</h4>
+      <p class="text-[10px] text-slate-500 font-mono">Rust Axum • Port 8080</p>
+    </div>
+    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+  </div>
+
+  <div class="flex justify-center my-2 relative">
+    <div class="w-20 h-20 rounded-full border-4 border-slate-100 flex items-center justify-center relative shadow-inner">
+      <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 36 36">
+        <path class="text-slate-100" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+        <path class="text-slate-900" stroke-dasharray="18, 100" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+      </svg>
+      <div class="text-center">
+        <span class="text-sm font-extrabold text-slate-900 block font-mono">18.4</span>
+        <span class="text-[9px] text-slate-500 font-mono">MB RAM</span>
+      </div>
+    </div>
+    <div class="absolute -top-1 bg-[#00d18f] text-slate-950 px-2 py-0.5 rounded-full text-[9px] font-extrabold shadow-sm font-mono">
+      Ultra Lean
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-100 text-center font-mono">
+    <div>
+      <span class="text-[10px] text-slate-400 block font-medium">Uptime</span>
+      <span class="text-xs font-extrabold text-slate-900">99.98%</span>
+    </div>
+    <div>
+      <span class="text-[10px] text-slate-400 block font-medium">Nginx Proxy</span>
+      <span class="text-xs font-extrabold text-emerald-600">Connected</span>
+    </div>
+  </div>
+</div>
+

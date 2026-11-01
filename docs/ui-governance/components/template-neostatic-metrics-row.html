@@ -1,0 +1,84 @@
+<!-- name: Neostatic Metrics Row -->
+<!-- category: STATS -->
+<!-- description: 3-column metrics summary bar showing active sites, zero-trust security rate, and disk quota -->
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-sans text-slate-200">
+  <!-- Card 1: Active Sites -->
+  <div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden">
+    <div class="flex items-center justify-between">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Active Deployed Sites</span>
+      <span class="w-2.5 h-2.5 rounded-full bg-[#00d18f] animate-pulse"></span>
+    </div>
+    <div class="my-4">
+      <div class="flex items-baseline gap-2">
+        <h3 class="text-3xl font-extrabold text-white tracking-tight">2</h3>
+        <span class="text-sm font-semibold text-slate-400 font-mono">sites</span>
+        <span class="ml-2 text-xs font-bold px-2 py-0.5 rounded-full bg-[#00d18f]/10 text-[#00d18f] border border-[#00d18f]/20 font-mono">
+          Online
+        </span>
+      </div>
+      <p class="text-[11px] text-slate-400 mt-1 font-mono">Disajikan langsung via Nginx subpath</p>
+    </div>
+    <div class="pt-3 border-t border-white/5 flex items-center justify-between text-xs text-slate-400 font-mono">
+      <span>Routing: Subpath</span>
+      <span class="text-emerald-400 font-bold">100% Uptime</span>
+    </div>
+  </div>
+
+  <!-- Card 2: Security Shield -->
+  <div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 flex flex-col justify-between shadow-xl">
+    <div class="flex items-center justify-between">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Security Integrity</span>
+      <span class="text-[11px] font-mono text-[#00d18f] bg-[#00d18f]/10 px-2 py-0.5 rounded-md border border-[#00d18f]/20">
+        Zero-Trust
+      </span>
+    </div>
+    <div class="my-4">
+      <div class="flex items-baseline gap-2">
+        <h3 class="text-3xl font-extrabold text-white tracking-tight">100</h3>
+        <span class="text-sm font-semibold text-slate-400 font-mono">%</span>
+        <span class="ml-2 text-xs font-bold px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-mono">
+          Clean
+        </span>
+      </div>
+      <p class="text-[11px] text-slate-400 mt-1 font-mono">Anti Zip-Slip • Extension Allowlist Guard</p>
+    </div>
+    <div class="pt-3 border-t border-white/5 flex items-center justify-between text-xs text-slate-400 font-mono">
+      <span>0 Zip-Slip Blocked</span>
+      <span>0 Injections</span>
+    </div>
+  </div>
+
+  <!-- Card 3: Storage & Releases -->
+  <div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 flex flex-col justify-between shadow-xl">
+    <div class="flex items-center justify-between">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Storage & Releases</span>
+      <span class="text-[11px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-md border border-cyan-500/20">
+        1.2 MB Total
+      </span>
+    </div>
+    <div class="my-3 space-y-3">
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold px-2 py-0.5 rounded-md bg-white text-slate-900 font-mono">420 KB</span>
+          <span class="text-xs text-slate-400 font-mono">Staticpage</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold px-2 py-0.5 rounded-md bg-[#00d18f] text-slate-950 font-mono">820 KB</span>
+          <span class="text-xs text-slate-400 font-mono">Releases</span>
+        </div>
+      </div>
+      <div class="w-full">
+        <div class="w-full h-2.5 rounded-full bg-slate-800 overflow-hidden flex">
+          <div class="h-full bg-white" style="width: 20%"></div>
+          <div class="h-full bg-[#00d18f]" style="width: 35%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pt-2 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+      <span>Maks 50 MB / zip</span>
+      <span>Atomic Symlink Enabled</span>
+    </div>
+  </div>
+</div>
+

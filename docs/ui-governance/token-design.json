@@ -1,0 +1,101 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "Editorial Design Tokens Standard",
+  "version": "1.1.0",
+  "colors": {
+    "canvas": {
+      "DEFAULT": { "value": "#FAF8F5", "type": "color" },
+      "dark": { "value": "#121110", "type": "color" }
+    },
+    "surface": {
+      "DEFAULT": { "value": "#FFFFFF", "type": "color" },
+      "soft": { "value": "#F4F1EC", "type": "color" },
+      "dark": { "value": "#1C1A18", "type": "color" },
+      "darkSoft": { "value": "#262320", "type": "color" }
+    },
+    "primary": {
+      "DEFAULT": { "value": "#1C1917", "type": "color" },
+      "hover": { "value": "#292524", "type": "color" },
+      "foreground": { "value": "#FAF8F5", "type": "color" },
+      "dark": { "value": "#FAF8F5", "type": "color" },
+      "darkForeground": { "value": "#1C1917", "type": "color" }
+    },
+    "accent": {
+      "terracotta": { "value": "#E25822", "type": "color" },
+      "terracottaHover": { "value": "#C84B1A", "type": "color" },
+      "gold": { "value": "#EAB308", "type": "color" },
+      "goldSoft": { "value": "#FEF3C7", "type": "color" },
+      "cream": { "value": "#EFECE6", "type": "color" }
+    },
+    "muted": {
+      "DEFAULT": { "value": "#78716C", "type": "color" },
+      "foreground": { "value": "#A8A29E", "type": "color" },
+      "light": { "value": "#D6D3D1", "type": "color" }
+    },
+    "border": {
+      "DEFAULT": { "value": "#EAE6DF", "type": "color" },
+      "dark": { "value": "#2E2A27", "type": "color" },
+      "focused": { "value": "#1C1917", "type": "color" }
+    },
+    "status": {
+      "success": { "value": "#10B981", "type": "color" },
+      "warning": { "value": "#F59E0B", "type": "color" },
+      "error": { "value": "#EF4444", "type": "color" }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "serif": { "value": "'Playfair Display', Georgia, serif", "type": "fontFamily" },
+      "sans": { "value": "'Plus Jakarta Sans', Inter, -apple-system, sans-serif", "type": "fontFamily" },
+      "mono": { "value": "'JetBrains Mono', Menlo, monospace", "type": "fontFamily" }
+    },
+    "fontSize": {
+      "2xs": { "value": "0.6875rem", "type": "dimension" },
+      "xs": { "value": "0.75rem", "type": "dimension" },
+      "sm": { "value": "0.875rem", "type": "dimension" },
+      "base": { "value": "1rem", "type": "dimension" },
+      "lg": { "value": "1.125rem", "type": "dimension" },
+      "xl": { "value": "1.25rem", "type": "dimension" },
+      "2xl": { "value": "1.5rem", "type": "dimension" },
+      "3xl": { "value": "2rem", "type": "dimension" },
+      "4xl": { "value": "2.5rem", "type": "dimension" }
+    },
+    "fontWeight": {
+      "normal": { "value": "400", "type": "fontWeight" },
+      "medium": { "value": "500", "type": "fontWeight" },
+      "semibold": { "value": "600", "type": "fontWeight" },
+      "bold": { "value": "700", "type": "fontWeight" }
+    },
+    "lineHeight": {
+      "tight": { "value": "1.2", "type": "number" },
+      "snug": { "value": "1.375", "type": "number" },
+      "normal": { "value": "1.5", "type": "number" }
+    }
+  },
+  "spacing": {
+    "1": { "value": "0.25rem", "type": "dimension" },
+    "2": { "value": "0.5rem", "type": "dimension" },
+    "3": { "value": "0.75rem", "type": "dimension" },
+    "4": { "value": "1rem", "type": "dimension" },
+    "5": { "value": "1.25rem", "type": "dimension" },
+    "6": { "value": "1.5rem", "type": "dimension" },
+    "8": { "value": "2rem", "type": "dimension" },
+    "10": { "value": "2.5rem", "type": "dimension" },
+    "12": { "value": "3rem", "type": "dimension" }
+  },
+  "borderRadius": {
+    "sm": { "value": "0.375rem", "type": "dimension" },
+    "md": { "value": "0.5rem", "type": "dimension" },
+    "lg": { "value": "0.75rem", "type": "dimension" },
+    "xl": { "value": "1rem", "type": "dimension" },
+    "2xl": { "value": "1.5rem", "type": "dimension" },
+    "3xl": { "value": "2rem", "type": "dimension" },
+    "full": { "value": "9999px", "type": "dimension" }
+  },
+  "shadows": {
+    "sm": { "value": "0 1px 2px 0 rgba(28, 25, 23, 0.03)", "type": "shadow" },
+    "card": { "value": "0 2px 8px -2px rgba(28, 25, 23, 0.04), 0 1px 3px 0 rgba(28, 25, 23, 0.02)", "type": "shadow" },
+    "cardHover": { "value": "0 12px 24px -6px rgba(28, 25, 23, 0.08), 0 4px 8px -2px rgba(28, 25, 23, 0.03)", "type": "shadow" },
+    "dropdown": { "value": "0 10px 30px -5px rgba(28, 25, 23, 0.12)", "type": "shadow" }
+  }
+}

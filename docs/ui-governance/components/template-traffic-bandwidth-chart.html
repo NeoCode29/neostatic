@@ -1,0 +1,30 @@
+<!-- name: Traffic Requests Wave Chart -->
+<!-- category: CHARTS -->
+<!-- description: Nginx static requests sparkline wave area chart with peak visitor pin and day markers -->
+
+<div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 flex flex-col justify-between max-w-sm text-slate-100 font-sans shadow-xl">
+  <div class="flex items-center justify-between">
+    <div>
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Static Traffic</span>
+      <span class="text-[10px] text-slate-500 font-mono">Nginx Cached Hits</span>
+    </div>
+    <button class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded-lg bg-slate-800/60 transition">View Logs</button>
+  </div>
+
+  <div class="relative mt-2">
+    <svg class="w-full h-24 overflow-visible" viewBox="0 0 300 100">
+      <line x1="0" y1="20" x2="300" y2="20" stroke="#252b3d" stroke-dasharray="3,3" />
+      <line x1="0" y1="60" x2="300" y2="60" stroke="#252b3d" stroke-dasharray="3,3" />
+      <path d="M 0,70 Q 50,35 100,50 T 200,25 T 300,40" fill="none" stroke="#00d18f" stroke-width="2.5" />
+      
+      <!-- Peak Pin -->
+      <circle cx="170" cy="30" r="4" fill="#00d18f" stroke="#1b1f2b" stroke-width="2" />
+      <rect x="145" y="5" width="50" height="18" rx="9" fill="white" />
+      <text x="170" y="17" font-size="9" font-weight="bold" fill="#0f172a" text-anchor="middle">84.2K</text>
+    </svg>
+    <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+      <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+    </div>
+  </div>
+</div>
+

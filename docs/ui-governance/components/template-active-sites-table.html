@@ -1,0 +1,73 @@
+<!-- name: Deployed Sites Management Table -->
+<!-- category: CARDS -->
+<!-- description: Active deployed static subpaths list with release timestamp, quick copy, preview, and rollback buttons -->
+
+<div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 text-slate-100 font-sans shadow-xl w-full">
+  <div class="flex items-center justify-between mb-4">
+    <div>
+      <h3 class="text-sm font-bold text-white tracking-tight">Active Deployed Pages</h3>
+      <p class="text-xs text-slate-400">Daftar situs statis yang sedang online di Nginx</p>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="text-xs px-2.5 py-1 rounded-full bg-[#00d18f]/10 text-[#00d18f] font-mono border border-[#00d18f]/20 font-bold">
+        3 live
+      </span>
+      <button class="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition">
+        🔄
+      </button>
+    </div>
+  </div>
+
+  <div class="space-y-3">
+    <!-- Site Item 1 -->
+    <div class="p-4 rounded-xl bg-[#141824] border border-white/5 hover:border-slate-700 transition flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div class="space-y-1">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#00d18f]"></span>
+          <h4 class="text-xs font-bold text-white font-mono">landing-v2</h4>
+          <span class="px-2 py-0.5 rounded-md text-[9px] bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-mono">current</span>
+        </div>
+        <p class="text-[11px] text-slate-400 font-mono">https://neoproject.my.id/staticpage/landing-v2/</p>
+        <p class="text-[10px] text-slate-500 font-mono">Rilis: 20261102_001230 • 12 berkas (1.4 MB)</p>
+      </div>
+
+      <div class="flex items-center gap-1.5 shrink-0">
+        <button class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-medium text-slate-300 hover:text-white transition border border-white/5 flex items-center gap-1">
+          <span>Copy</span>
+        </button>
+        <a href="#" class="px-3 py-1.5 rounded-lg bg-[#00d18f]/10 text-xs font-bold text-[#00d18f] hover:bg-[#00d18f]/20 transition border border-[#00d18f]/20 flex items-center gap-1">
+          <span>Open ↗</span>
+        </a>
+        <button class="p-1.5 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500/20 transition border border-red-500/20">
+          🗑️
+        </button>
+      </div>
+    </div>
+
+    <!-- Site Item 2 -->
+    <div class="p-4 rounded-xl bg-[#141824] border border-white/5 hover:border-slate-700 transition flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div class="space-y-1">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#00d18f]"></span>
+          <h4 class="text-xs font-bold text-white font-mono">panduan-interaktif</h4>
+          <span class="px-2 py-0.5 rounded-md text-[9px] bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-mono">current</span>
+        </div>
+        <p class="text-[11px] text-slate-400 font-mono">https://neoproject.my.id/staticpage/panduan-interaktif/</p>
+        <p class="text-[10px] text-slate-500 font-mono">Rilis: 20261101_171433 • 8 berkas (840 KB)</p>
+      </div>
+
+      <div class="flex items-center gap-1.5 shrink-0">
+        <button class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-medium text-slate-300 hover:text-white transition border border-white/5 flex items-center gap-1">
+          <span>Copy</span>
+        </button>
+        <a href="#" class="px-3 py-1.5 rounded-lg bg-[#00d18f]/10 text-xs font-bold text-[#00d18f] hover:bg-[#00d18f]/20 transition border border-[#00d18f]/20 flex items-center gap-1">
+          <span>Open ↗</span>
+        </a>
+        <button class="p-1.5 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500/20 transition border border-red-500/20">
+          🗑️
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

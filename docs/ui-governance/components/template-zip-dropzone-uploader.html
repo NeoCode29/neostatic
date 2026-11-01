@@ -1,0 +1,81 @@
+<!-- name: Zip Dropzone Deploy Form -->
+<!-- category: FORMS -->
+<!-- description: Drag and Drop ZIP uploader with slug validator, live verification checklist, and instant deploy CTA -->
+
+<div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 text-slate-100 font-sans shadow-xl w-full max-w-xl">
+  <div class="flex items-center justify-between mb-4">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-[#00d18f]/10 text-[#00d18f] flex items-center justify-center border border-[#00d18f]/20 shadow-md shadow-[#00d18f]/10">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="17 8 12 3 7 8"></polyline>
+          <line x1="12" y1="3" x2="12" y2="15"></line>
+        </svg>
+      </div>
+      <div>
+        <h3 class="text-sm font-bold text-white tracking-tight">Deploy Static Package</h3>
+        <p class="text-xs text-slate-400">Verifikasi keamanan otomatis & atomic symlink</p>
+      </div>
+    </div>
+    <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-mono">
+      Max 50MB
+    </span>
+  </div>
+
+  <form class="space-y-4">
+    <!-- Slug Field -->
+    <div>
+      <label class="block text-xs font-semibold text-slate-300 mb-1.5">
+        Nama Halaman (Subpath Slug)
+      </label>
+      <div class="relative">
+        <input 
+          type="text" 
+          placeholder="contoh: landing-v2, promo-page" 
+          class="w-full bg-[#141824] border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:ring-2 focus:ring-[#00d18f]/40 font-mono placeholder:text-slate-600"
+          value="landing-v2"
+        />
+      </div>
+      <p class="text-[10px] text-slate-500 font-mono mt-1">Live URL: https://neoproject.my.id/staticpage/landing-v2/</p>
+    </div>
+
+    <!-- Dropzone Area -->
+    <div class="border-2 border-dashed border-white/10 hover:border-[#00d18f]/60 bg-[#141824]/60 rounded-xl p-6 text-center cursor-pointer transition flex flex-col items-center justify-center gap-2">
+      <div class="w-12 h-12 rounded-full bg-slate-800/80 text-[#00d18f] flex items-center justify-center">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+          <line x1="12" y1="22.08" x2="12" y2="12"></line>
+        </svg>
+      </div>
+      <div>
+        <p class="text-xs font-semibold text-slate-200">
+          Tarik & letakkan berkas <span class="text-[#00d18f] font-mono">.zip</span> di sini
+        </p>
+        <p class="text-[10px] text-slate-500 mt-0.5">atau klik untuk memilih dari komputer Anda</p>
+      </div>
+    </div>
+
+    <!-- Security Check Badges -->
+    <div class="grid grid-cols-3 gap-2 text-[10px] font-mono">
+      <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center gap-1.5">
+        <span>🛡️ Anti Zip-Slip</span>
+      </div>
+      <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center gap-1.5">
+        <span>📄 Allowlist Exts</span>
+      </div>
+      <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center gap-1.5">
+        <span>⚡ Atomic Symlink</span>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <button class="w-full py-3 rounded-xl bg-gradient-to-r from-[#00d18f] to-cyan-500 hover:from-[#00ba7f] hover:to-cyan-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-[#00d18f]/20 transition active:scale-[0.99]">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+      </svg>
+      <span>Verifikasi & Deploy Atomik</span>
+    </button>
+  </form>
+</div>
+

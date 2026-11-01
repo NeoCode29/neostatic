@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIZCRM - Modern Dark Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            bgDark: '#12141a',
+            sidebarDark: '#161922',
+            cardDark: '#1b1f2b',
+            cardBorder: 'rgba(255, 255, 255, 0.05)',
+            mint: '#00d18f',
+            mintHover: '#00ba7f',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #12141a;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #272c3d;
+      border-radius: 9999px;
+    }
+    .striped-bar {
+      background: repeating-linear-gradient(
+        45deg,
+        #2a2f40,
+        #2a2f40 6px,
+        #1e2230 6px,
+        #1e2230 12px
+      );
+    }
+  </style>
+</head>
+<body class="min-h-screen flex text-slate-200">
+
+  <!-- SIDEBAR -->
+  <aside class="w-64 bg-[#151821] border-r border-[#222736] flex flex-col justify-between p-5 shrink-0 select-none">
+    <div class="space-y-6">
+      <!-- Logo -->
+      <div class="flex items-center gap-3 px-2 pt-1">
+        <div class="w-8 h-8 rounded-lg bg-[#00d18f] flex items-center justify-center shadow-lg shadow-[#00d18f]/20">
+          <svg class="w-5 h-5 text-slate-950" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </div>
+        <span class="text-lg font-extrabold tracking-wider text-white">AIZCRM</span>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="space-y-1 text-sm font-semibold">
+        <!-- Active Overview -->
+        <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-[#00d18f] text-slate-950 font-bold shadow-md shadow-[#00d18f]/25 transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span>Overview</span>
+        </a>
+
+        <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-[#1d2230] transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+          <span>Report</span>
+        </a>
+
+        <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-[#1d2230] transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+          </svg>
+          <span>Lead</span>
+        </a>
+
+        <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-[#1d2230] transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <span>Revenue</span>
+        </a>
+
+        <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-[#1d2230] transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+          <span>Marketing</span>
+        </a>
+
+        <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-[#1d2230] transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+          </svg>
+          <span>Opportunities</span>
+        </a>
+
+        <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-[#1d2230] transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+          </svg>
+          <span>Task</span>
+        </a>
+
+        <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-[#1d2230] transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Contacts</span>
+        </a>
+
+        <a href="#" class="flex items-center justify-between px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-[#1d2230] transition">
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            <span>Help Center</span>
+          </div>
+          <span class="w-5 h-5 rounded-full bg-[#00d18f]/20 text-[#00d18f] text-xs flex items-center justify-center font-bold">4</span>
+        </a>
+
+        <a href="#" class="flex items-center justify-between px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-[#1d2230] transition">
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+            <span>Settings</span>
+          </div>
+          <span class="w-5 h-5 rounded-full bg-rose-500 text-white text-xs flex items-center justify-center font-bold">1</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Bottom Customer Metric Card -->
+    <div class="bg-white rounded-2xl p-4 text-slate-900 shadow-xl mt-6 relative overflow-hidden">
+      <div class="flex items-center justify-between mb-3">
+        <div>
+          <h4 class="text-xs font-bold text-slate-900">Customer metric</h4>
+          <p class="text-[10px] text-slate-400">Overall insights</p>
+        </div>
+        <svg class="w-4 h-4 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </div>
+
+      <!-- Avatar with Circular Progress -->
+      <div class="flex justify-center my-2 relative">
+        <div class="w-20 h-20 rounded-full border-4 border-slate-100 flex items-center justify-center relative shadow-inner">
+          <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 36 36">
+            <path class="text-slate-100" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            <path class="text-slate-900" stroke-dasharray="85, 100" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+          </svg>
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Customer Avatar" class="w-14 h-14 rounded-full object-cover">
+        </div>
+        <div class="absolute -top-1 bg-white px-2 py-0.5 rounded-full text-[10px] font-bold border border-slate-100 shadow-sm">
+          4.5 | 5.0
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-100 text-center">
+        <div>
+          <span class="text-[10px] text-slate-400 block font-medium">Lifetime value</span>
+          <span class="text-xs font-extrabold text-slate-900">$92,500</span>
+        </div>
+        <div>
+          <span class="text-[10px] text-slate-400 block font-medium">Net promoter</span>
+          <span class="text-xs font-extrabold text-slate-900">Score 70</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="flex-1 p-8 overflow-y-auto custom-scroll">
+    <!-- Top Header -->
+    <header class="flex items-center justify-between pb-7">
+      <h2 class="text-2xl font-bold tracking-tight text-white">Dashboard</h2>
+      
+      <div class="flex items-center gap-4">
+        <!-- Search Button -->
+        <button class="w-10 h-10 rounded-full bg-[#1b1f2b] border border-white/5 flex items-center justify-center text-slate-400 hover:text-white transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Notification Bell with Dot -->
+        <button class="w-10 h-10 rounded-full bg-[#1b1f2b] border border-white/5 flex items-center justify-center text-slate-400 hover:text-white transition relative">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+          <span class="w-2 h-2 rounded-full bg-rose-500 absolute top-2.5 right-2.5"></span>
+        </button>
+
+        <!-- Profile -->
+        <div class="flex items-center gap-3 pl-2">
+          <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#00d18f]">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Selen Swift" class="w-full h-full object-cover">
+          </div>
+          <div class="hidden sm:block">
+            <h4 class="text-xs font-bold text-white">Selen Swift</h4>
+            <p class="text-[11px] text-slate-400">Manager</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DASHBOARD GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- CARD 1: Total Sales -->
+      <div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-400">Total sales</span>
+        </div>
+        <div class="my-4">
+          <div class="flex items-baseline gap-2">
+            <h3 class="text-3xl font-extrabold text-white">1,200K</h3>
+            <span class="text-sm font-semibold text-slate-400">$</span>
+            <span class="ml-2 text-xs font-bold px-2 py-0.5 rounded-full bg-[#00d18f]/10 text-[#00d18f] border border-[#00d18f]/20">
+              +2.1%
+            </span>
+          </div>
+        </div>
+        <button class="w-full py-2.5 px-4 rounded-xl bg-white text-slate-900 font-bold text-xs flex items-center justify-between hover:bg-slate-100 transition shadow-lg">
+          <span>View chart</span>
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- CARD 2: Visitor Online -->
+      <div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-400">Visitor online</span>
+          <button class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded-lg bg-slate-800/60">View</button>
+        </div>
+
+        <div class="relative mt-2">
+          <!-- Sparkline Wave Graph -->
+          <svg class="w-full h-24 overflow-visible" viewBox="0 0 300 100">
+            <!-- Grid lines -->
+            <line x1="0" y1="20" x2="300" y2="20" stroke="#252b3d" stroke-dasharray="3,3" />
+            <line x1="0" y1="60" x2="300" y2="60" stroke="#252b3d" stroke-dasharray="3,3" />
+            
+            <!-- Area & Line -->
+            <path d="M 0,70 Q 50,40 100,55 T 200,30 T 300,45" fill="none" stroke="#00d18f" stroke-width="2.5" />
+            
+            <!-- Tooltip Pin -->
+            <circle cx="170" cy="35" r="4" fill="#00d18f" stroke="#1b1f2b" stroke-width="2" />
+            <rect x="150" y="10" width="40" height="18" rx="9" fill="white" />
+            <text x="170" y="22" font-size="9" font-weight="bold" fill="#0f172a" text-anchor="middle">112K</text>
+          </svg>
+          <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: Market Share -->
+      <div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-400">Market Share</span>
+          <button class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded-lg bg-slate-800/60">View</button>
+        </div>
+
+        <div class="my-3 space-y-4">
+          <!-- Badges -->
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold px-2 py-0.5 rounded-md bg-white text-slate-900">25%</span>
+              <span class="text-xs text-slate-400">Tiktok</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold px-2 py-0.5 rounded-md bg-[#00d18f] text-slate-950">50%</span>
+              <span class="text-xs text-slate-400">Instagram</span>
+            </div>
+          </div>
+
+          <!-- Progress Bar Segmented -->
+          <div class="w-full">
+            <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden flex">
+              <div class="h-full bg-white" style="width: 25%"></div>
+              <div class="h-full bg-[#00d18f]" style="width: 50%"></div>
+            </div>
+            <div class="text-right mt-1 text-[10px] text-slate-500 font-mono">75/100%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4: Revenue Bar Chart -->
+      <div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-semibold text-slate-400">Revenue</span>
+          <span class="text-[11px] text-slate-400 flex items-center gap-1 bg-slate-800/60 px-2 py-0.5 rounded-md cursor-pointer">
+            Weekly <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </div>
+
+        <!-- Custom Striped Bars with Value Tag -->
+        <div class="relative h-36 flex items-end justify-between px-3 pt-6">
+          <!-- Mon -->
+          <div class="flex flex-col items-center gap-1">
+            <div class="w-6 h-16 rounded-full striped-bar"></div>
+            <span class="text-[10px] text-slate-500">Mon</span>
+          </div>
+          <!-- Tue -->
+          <div class="flex flex-col items-center gap-1">
+            <div class="w-6 h-24 rounded-full striped-bar"></div>
+            <span class="text-[10px] text-slate-500">Tue</span>
+          </div>
+          <!-- Wed (Active Target $320) -->
+          <div class="flex flex-col items-center gap-1 relative">
+            <div class="absolute -top-6 bg-white text-slate-950 px-2 py-0.5 rounded-full text-[10px] font-bold shadow-lg">
+              $320
+            </div>
+            <div class="w-6 h-28 rounded-full bg-[#00d18f] shadow-lg shadow-[#00d18f]/20"></div>
+            <span class="text-[10px] text-slate-400 font-bold">Wed</span>
+          </div>
+          <!-- Thu -->
+          <div class="flex flex-col items-center gap-1">
+            <div class="w-6 h-20 rounded-full striped-bar"></div>
+            <span class="text-[10px] text-slate-500">Thu</span>
+          </div>
+          <!-- Fri -->
+          <div class="flex flex-col items-center gap-1">
+            <div class="w-6 h-14 rounded-full striped-bar"></div>
+            <span class="text-[10px] text-slate-500">Fri</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5: Retention Rate Gauge -->
+      <div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-semibold text-slate-400">Retention rate</span>
+          <span class="text-[11px] text-slate-400 flex items-center gap-1 bg-slate-800/60 px-2 py-0.5 rounded-md cursor-pointer">
+            Weekly <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </div>
+
+        <!-- Speedometer / Arc Meter -->
+        <div class="flex flex-col items-center justify-center relative py-2">
+          <svg class="w-48 h-28" viewBox="0 0 200 110">
+            <!-- Dashed Arc Track -->
+            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#252b3d" stroke-width="14" stroke-dasharray="3, 3" />
+            <!-- Active Progress Arc -->
+            <path d="M 20 100 A 80 80 0 0 1 150 45" fill="none" stroke="#00d18f" stroke-width="14" stroke-dasharray="3, 3" />
+          </svg>
+          <div class="absolute bottom-2 text-center">
+            <span class="text-3xl font-extrabold text-white">72</span>
+            <span class="text-xs text-slate-400 font-bold">%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6: Top Customers Multi-Donut -->
+      <div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-1">
+          <span class="text-xs font-semibold text-slate-400">Top customers</span>
+          <span class="text-[11px] text-slate-400 flex items-center gap-1 bg-slate-800/60 px-2 py-0.5 rounded-md cursor-pointer">
+            Weekly <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </div>
+
+        <!-- Concentric Rings -->
+        <div class="flex items-center justify-center relative my-2">
+          <svg class="w-32 h-32 -rotate-90" viewBox="0 0 120 120">
+            <!-- Outer Ring (Cyan) -->
+            <circle cx="60" cy="60" r="50" stroke="#06b6d4" stroke-width="6" fill="none" stroke-dasharray="240 314" stroke-linecap="round"/>
+            <!-- Middle Ring (Mint) -->
+            <circle cx="60" cy="60" r="42" stroke="#00d18f" stroke-width="6" fill="none" stroke-dasharray="190 264" stroke-linecap="round"/>
+            <!-- Inner Ring (Blue) -->
+            <circle cx="60" cy="60" r="34" stroke="#3b82f6" stroke-width="6" fill="none" stroke-dasharray="130 214" stroke-linecap="round"/>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <span class="text-base font-extrabold text-white leading-none">720<span class="text-xs">K</span></span>
+          </div>
+        </div>
+
+        <!-- User mini list -->
+        <div class="space-y-2 pt-2 border-t border-white/5">
+          <div class="flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#00d18f]"></span>
+              <span class="font-semibold text-white">Devon Lane</span>
+            </div>
+            <span class="text-[10px] text-slate-400">Social app</span>
+          </div>
+          <div class="flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#06b6d4]"></span>
+              <span class="font-semibold text-white">Wade Warren</span>
+            </div>
+            <span class="text-[10px] text-slate-400">Mobile web</span>
+          </div>
+          <div class="flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#3b82f6]"></span>
+              <span class="font-semibold text-white">Darlene Robertson</span>
+            </div>
+            <span class="text-[10px] text-slate-400">E-commerce</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 7: Weekly Tasks (Span 3 cols) -->
+      <div class="md:col-span-3 bg-[#1b1f2b] border border-white/5 rounded-2xl p-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+          <div>
+            <h4 class="text-sm font-bold text-white">Weekly tasks</h4>
+            <p class="text-xs text-slate-400 mt-0.5">7/10 task completed</p>
+          </div>
+          <div class="flex items-center gap-6">
+            <div>
+              <span class="text-2xl font-extrabold text-white">70%</span>
+              <span class="text-xs text-slate-400 block">Task completed</span>
+            </div>
+            <div>
+              <span class="text-2xl font-extrabold text-white">32%</span>
+              <span class="text-xs text-[#00d18f] block">Better than last month</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          <!-- Mini Task Call Card -->
+          <div class="md:col-span-4 bg-[#141824] rounded-xl p-3.5 border border-white/5 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Wade" class="w-9 h-9 rounded-full object-cover">
+              <div>
+                <p class="text-xs font-bold text-white">Wade Warren</p>
+                <p class="text-[10px] text-slate-400 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#00d18f]"></span> Now • Google Meet
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <button class="w-7 h-7 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center hover:bg-rose-500/30">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </button>
+              <button class="w-7 h-7 rounded-full bg-[#00d18f]/20 text-[#00d18f] flex items-center justify-center hover:bg-[#00d18f]/30">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Timeline Gantt Bars -->
+          <div class="md:col-span-8 space-y-2">
+            <div class="flex items-center gap-2 text-xs">
+              <span class="w-24 text-[11px] text-slate-400 shrink-0">Project kickoff</span>
+              <div class="flex-1 bg-slate-800/40 h-6 rounded-lg overflow-hidden flex items-center px-1">
+                <div class="h-4 rounded-md bg-rose-500 text-[10px] text-white font-bold flex items-center px-2" style="width: 70%">
+                  70%
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 text-xs">
+              <span class="w-24 text-[11px] text-slate-400 shrink-0">Biz requirements</span>
+              <div class="flex-1 bg-slate-800/40 h-6 rounded-lg overflow-hidden flex items-center px-1">
+                <div class="h-4 rounded-md bg-orange-500 text-[10px] text-white font-bold flex items-center px-2" style="width: 50%">
+                  50%
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 text-xs">
+              <span class="w-24 text-[11px] text-slate-400 shrink-0">Interviews</span>
+              <div class="flex-1 bg-slate-800/40 h-6 rounded-lg overflow-hidden flex items-center px-1">
+                <div class="h-4 rounded-md bg-blue-500 text-[10px] text-white font-bold flex items-center px-2" style="width: 40%">
+                  40%
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 text-xs">
+              <span class="w-24 text-[11px] text-slate-400 shrink-0">Analyze</span>
+              <div class="flex-1 bg-slate-800/40 h-6 rounded-lg overflow-hidden flex items-center px-1">
+                <div class="h-4 rounded-md bg-[#00d18f] text-[10px] text-slate-950 font-bold flex items-center px-2" style="width: 85%">
+                  85%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

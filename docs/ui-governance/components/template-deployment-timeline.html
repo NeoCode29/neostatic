@@ -1,0 +1,69 @@
+<!-- name: Deployment Pipeline Timeline -->
+<!-- category: CARDS -->
+<!-- description: Atomic deployment pipeline timeline showing real-time verification and symlink stages -->
+
+<div class="bg-[#1b1f2b] border border-white/5 rounded-2xl p-6 text-slate-100 font-sans shadow-xl w-full">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+    <div>
+      <h4 class="text-sm font-bold text-white tracking-tight">Recent Atomic Pipeline</h4>
+      <p class="text-xs text-slate-400 mt-0.5">Zero-downtime symlink switch breakdown</p>
+    </div>
+    <div class="flex items-center gap-6">
+      <div>
+        <span class="text-2xl font-extrabold text-[#00d18f] font-mono">64ms</span>
+        <span class="text-xs text-slate-400 block font-mono">Total Deploy Latency</span>
+      </div>
+      <div>
+        <span class="text-2xl font-extrabold text-cyan-400 font-mono">100%</span>
+        <span class="text-xs text-slate-400 block font-mono">Integrity Pass</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="space-y-2.5 pt-2">
+    <!-- Step 1 -->
+    <div class="flex items-center gap-3 text-xs">
+      <span class="w-36 text-[11px] text-slate-400 shrink-0 font-mono">1. Zip Slip & Slug Check</span>
+      <div class="flex-1 bg-slate-800/40 h-6 rounded-lg overflow-hidden flex items-center px-1">
+        <div class="h-4 rounded-md bg-[#00d18f] text-[10px] text-slate-950 font-bold flex items-center justify-between px-2 font-mono" style="width: 100%">
+          <span>Passed</span>
+          <span>12ms</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="flex items-center gap-3 text-xs">
+      <span class="w-36 text-[11px] text-slate-400 shrink-0 font-mono">2. Extractor Sandbox</span>
+      <div class="flex-1 bg-slate-800/40 h-6 rounded-lg overflow-hidden flex items-center px-1">
+        <div class="h-4 rounded-md bg-cyan-500 text-[10px] text-slate-950 font-bold flex items-center justify-between px-2 font-mono" style="width: 100%">
+          <span>Extracted</span>
+          <span>48ms</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="flex items-center gap-3 text-xs">
+      <span class="w-36 text-[11px] text-slate-400 shrink-0 font-mono">3. Symlink Switch</span>
+      <div class="flex-1 bg-slate-800/40 h-6 rounded-lg overflow-hidden flex items-center px-1">
+        <div class="h-4 rounded-md bg-emerald-400 text-[10px] text-slate-950 font-bold flex items-center justify-between px-2 font-mono" style="width: 100%">
+          <span>Atomic Link</span>
+          <span>4ms</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="flex items-center gap-3 text-xs">
+      <span class="w-36 text-[11px] text-slate-400 shrink-0 font-mono">4. Nginx Routing</span>
+      <div class="flex-1 bg-slate-800/40 h-6 rounded-lg overflow-hidden flex items-center px-1">
+        <div class="h-4 rounded-md bg-blue-500 text-[10px] text-white font-bold flex items-center justify-between px-2 font-mono" style="width: 100%">
+          <span>Active</span>
+          <span>0ms</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

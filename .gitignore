@@ -1,0 +1,29 @@
+# Node & Frontend
+node_modules/
+dist/
+frontend/node_modules/
+frontend/dist/
+
+# Rust
+/target/
+**/target/
+*.exe
+
+# Local Storage & Runtime
+storage/
+*.zip
+*.log
+
+# Sensitive Credentials
+.neokanban.json
+.env
+.env.*
+
+# OS & Misc
+.DS_Store
+Thumbs.db
+.kanban-map.json
+
+# Python
+__pycache__/
+*.pyc

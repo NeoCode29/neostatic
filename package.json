@@ -1,0 +1,20 @@
+{
+  "name": "harnes-neokanban",
+  "version": "1.0.0",
+  "description": "Lean Agentic Harness terintegrasi NeoKanban untuk Antigravity (Zero RAG)",
+  "main": "scripts/kanban.ts",
+  "type": "module",
+  "scripts": {
+    "kanban": "npx tsx scripts/kanban.ts",
+    "bundle": "npx tsx scripts/kanban.ts bundle",
+    "test": "npx tsx scripts/test-kanban.ts"
+  },
+  "keywords": ["antigravity", "agentic-harness", "neokanban", "tdd"],
+  "author": "Kresna",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}
